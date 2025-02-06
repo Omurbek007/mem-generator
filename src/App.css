@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+#root {
+  margin: 0 auto;
+
+}
+
+
+  p {
+    text-shadow: 2px 2px 2px #000; /* Correct Syntax */
+  }
+  
