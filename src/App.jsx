@@ -57,7 +57,7 @@ function App() {
       <section>
         <div className='bg-purple-900'>
 
-          <header className='text-white mx-auto h-20 flex items-center gap-4 max-w-[50%]'>
+          <header className='w-[90%] md:max-w-[80%] lg:max-w-[50%] text-white mx-auto h-20 flex items-center gap-4'>
             <img className='w-20' src={logo} alt="logo" />
             <div>
               <h1 className='text-4xl font-bold '>Meme Generator</h1>
@@ -65,21 +65,21 @@ function App() {
           </header>        
           </div>
 
-        <form action={formHandler} className='max-w-[50%] mx-auto flex flex-col items-center bg-white gap-6 space-y-5 mt-6'>
+        <form action={formHandler} className='w-[90%] md:max-w-[80%] lg:max-w-[50%] mx-auto flex flex-col items-center bg-white gap-6 space-y-5 mt-6'>
           <div className='flex justify-between gap-5 w-full'>
             <div className='w-full'>
-              <label className='text-gray-700 text-lg w-full' htmlFor="top-text">Top Text</label>
-              <input onChange={handleChange} value={memes.topText} className='border-1 border-gray-400 text-xl rounded-lg outline outline-black/20 h-15 w-full text-gray-600 px-3 py-2' placeholder='Some text!' type="text" name="topText" id="top-text" />
+              <label className='text-gray-700 text-xs md:text-lg w-full' htmlFor="top-text">Top Text</label>
+              <input onChange={handleChange} value={memes.topText} className='border-1 border-gray-400 text-xs md:text-xl rounded-lg outline outline-black/20 h-10 md:h-15 w-full text-gray-600 px-3 py-2' placeholder='Some text!' type="text" name="topText" id="top-text" />
             </div>
             <div className='w-full'>
-              <label className='text-gray-700 text-lg' htmlFor="bottom-text">Bottom Text</label>
-              <input onChange={handleChange} value={memes.bottomText} className='border-1 border-gray-400 text-xl rounded-lg outline outline-black/20 h-15 w-full text-gray-600 px-3 py-2' placeholder='Some text!' type="text" name="bottomText" id="bottom-text" />
+              <label className='text-gray-700 text-xs md:text-lg' htmlFor="bottom-text">Bottom Text</label>
+              <input onChange={handleChange} value={memes.bottomText} className='border-1 border-gray-400 text-xs md:text-xl rounded-lg outline outline-black/20 h-10 md:h-15 w-full text-gray-600 px-3 py-2' placeholder='Some text!' type="text" name="bottomText" id="bottom-text" />
             </div>
           </div>
         </form>
 
-          <div className='max-w-[50%] mx-auto py-4'>
-          <button onClick={getMemeImg} className='text-white bg-purple-900 p-3 text-2xl font-bold rounded-xl h-15 w-full mb-6 cursor-pointer' type="submit">Get a new meme image 🖼️</button>
+          <div className='w-[90%] md:max-w-[80%] lg:max-w-[50%] mx-auto py-4'>
+          <button onClick={getMemeImg} className='text-white bg-purple-900 p-3 text-xs md:text-2xl font-bold rounded-xl h-10 md:h-15 w-full mb-6 cursor-pointer' type="submit">Get a new meme image 🖼️</button>
           </div>
         {memes.imageUrl && <Meme img={memes.imageUrl} topText={memes.topText} bottomText={memes.bottomText} imageSection={imageSection}/>}
        
