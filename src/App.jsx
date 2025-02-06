@@ -1,21 +1,20 @@
 import { useEffect, useState, useRef} from 'react'
 import Meme from './meme'
 import logo from "./assets/Troll Face.png"
-// import erin from "./assets/erin.jpg"
+import meme from "./assets/mem.jpg"
 import './App.css'
 
 
 function App() {
-
   const [memes, setMemes] = useState({
-    topText: "Адамга акыл берилгени менен",
-    bottomText: "Дээр деген ар-бироого эле бериле бербейт экен!",
-    imageUrl: null
+    topText: "Когда пытаешься объяснить что-то на собрании...",
+    bottomText: "Но все равно тебя никто не понимает...",
+    imageUrl: meme
 })
 
   const [allMemes, setAllMemes] = useState([])
-
   const imageSection = useRef(null)
+
   useEffect(()=> {
     if (memes.imageUrl !== "" && imageSection.current !== null) {
       imageSection.current.scrollIntoView({behavior: "smooth", block: "center"})
@@ -49,7 +48,6 @@ function App() {
     
   }
 
-
   function formHandler () {
     return console.log("Form submited!")
   }
@@ -59,7 +57,7 @@ function App() {
       <section>
         <div className='bg-purple-900'>
 
-          <header className=' mx-auto h-30 flex items-center gap-4 max-w-[60%]'>
+          <header className='text-white mx-auto h-20 flex items-center gap-4 max-w-[50%]'>
             <img className='w-20' src={logo} alt="logo" />
             <div>
               <h1 className='text-4xl font-bold '>Meme Generator</h1>
@@ -67,8 +65,7 @@ function App() {
           </header>        
           </div>
 
-
-        <form action={formHandler} className='max-w-[60%] mx-auto flex flex-col items-center bg-white gap-6 space-y-5 mt-6'>
+        <form action={formHandler} className='max-w-[50%] mx-auto flex flex-col items-center bg-white gap-6 space-y-5 mt-6'>
           <div className='flex justify-between gap-5 w-full'>
             <div className='w-full'>
               <label className='text-gray-700 text-lg w-full' htmlFor="top-text">Top Text</label>
@@ -81,10 +78,8 @@ function App() {
           </div>
         </form>
 
-
-          <div className='max-w-[60%] mx-auto py-4'>
-
-          <button onClick={getMemeImg} className='bg-purple-900 p-3 text-2xl font-bold rounded-xl h-15 w-full mb-6 cursor-pointer' type="submit">Get a new meme image 🖼️</button>
+          <div className='max-w-[50%] mx-auto py-4'>
+          <button onClick={getMemeImg} className='text-white bg-purple-900 p-3 text-2xl font-bold rounded-xl h-15 w-full mb-6 cursor-pointer' type="submit">Get a new meme image 🖼️</button>
           </div>
         {memes.imageUrl && <Meme img={memes.imageUrl} topText={memes.topText} bottomText={memes.bottomText} imageSection={imageSection}/>}
        
