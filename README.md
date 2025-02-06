@@ -1,8 +1,5 @@
-# React + Vite
+# Meme generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+веб-приложение на ReactJS с использованием Tailwind CSS, которое получает случайные мемы из бесплатного API. Пользователи могут добавлять текст поверх изображений и мгновенно видеть результат. Приложение имеет удобный интерфейс и предоставляет разнообразные шаблоны мемов.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## https://omurbek007.github.io/mem-generator/
